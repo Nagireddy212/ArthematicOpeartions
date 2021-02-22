@@ -39,3 +39,17 @@ do
 done
 
 echo "Array in desecnding order : ${array[@]}"
+
+for (( i=1; i<=4; i++ ))
+do
+	for (( j=$((i+1)); j<=4; j++ ))
+	do
+		if [ $((array[$i])) -gt $((array[$j])) ]
+		then
+			min=$((array[$i]))
+			array[$i]=$((array[$j]))
+			array[$j]=$min
+		fi
+	done
+done
+echo "Array in Assending order : ${array[@]}"
