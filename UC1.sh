@@ -5,3 +5,6 @@ read -p "Enter the number3" c
 
 result1=$(( $a+$b*$c ))
 echo $result1
+
+result2=$(( $a*$b+$c ))
+echo $result2
