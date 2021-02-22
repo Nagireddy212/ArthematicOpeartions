@@ -24,3 +24,18 @@ do
 	array[$counter]=${dict[$counter]}
 done
 echo "Array values : ${array[@]}"
+
+for (( i=1; i<=4; i++ ))
+do
+	for (( j=$((i+1)); j<=4; j++ ))
+	do
+		if [ $((array[$i])) -lt $((array[$i])) ]
+		then
+		max=$((array[$i]))
+		array[$i]=$((array[$i]))
+		array[$j]=$max
+		fi
+	done
+done
+
+echo "Array in desecnding order : ${array[@]}"
